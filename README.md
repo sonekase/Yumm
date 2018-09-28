@@ -40,5 +40,6 @@ React
 ## Is there anything else you’d like your instructor to know?
 
 * Please register for an API Key on Yelp-Fusion.
+* Enter your API key on App.js line 17 where it says API-KEY.
 
 * Create this capstone for Mobile Application in React-Native, Obejective-C.

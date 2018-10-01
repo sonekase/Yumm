@@ -7,7 +7,7 @@ const config = {
   params: {
     term: 'pizza',
     location: 'Seattle',
-    total: 10
+    limit: 10
   }
 };
 

@@ -20,11 +20,15 @@ class RestaurantList extends Component {
     .then(response => this.setState({ restaurants: response.data }));
     }
 
+  renderRestaurants() {
+    return this.state.restaurants.businesses.map(restaurant => <Text>{restaurant.name}</Text>);
+  }
+
   render() {
     console.log(this.state);
+
     return (
       <View>
-        <Text>Restaurant List!!!</Text>
       </View>
     );
   }

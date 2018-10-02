@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import axios from 'axios';
 
+// Remove API Key and replace with API KEY before pushing to GitHub...
 const config = {
   headers: {'Authorization': 'Bearer GqXpqnEMa9EO9na_qp2XuDEDCuFYWGLJF-JlmK8qGm0oaTr-DsDxv65dBl-dsRL2aa6T9uNkY-fgyX1KdedpuWXZl9fXcfhr3MWLEvYmWWHBT4y-KofTCTKAG2WqW3Yx'},
   params: {
@@ -12,12 +13,15 @@ const config = {
 };
 
 class RestaurantList extends Component {
+  state = { restaurants: [] };
+
   componentWillMount() {
     axios.get('https://api.yelp.com/v3/businesses/search', config)
-    .then(response => console.log(response));
+    .then(response => this.setState({ restaurants: response.data }));
     }
 
   render() {
+    console.log(this.state);
     return (
       <View>
         <Text>Restaurant List!!!</Text>

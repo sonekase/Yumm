@@ -32,7 +32,7 @@ constructor(props) {
     console.log(this.state.restaurants.businesses);
     if(this.state.restaurants.businesses) {
 
-      return this.state.restaurants.businesses.map(restaurant => <Text>{restaurant.name}</Text>);
+      return this.state.restaurants.businesses.map(restaurant => <Text>{restaurant.name}: {restaurant.phone}</Text>);
     }
     // console.log("Test Test: RENDER RESTAURANTS!!!");
     // return "test";

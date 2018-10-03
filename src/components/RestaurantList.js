@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // Remove API Key and replace with API KEY before pushing to GitHub...
 const config = {
-  headers: {'Authorization': 'Bearer GqXpqnEMa9EO9na_qp2XuDEDCuFYWGLJF-JlmK8qGm0oaTr-DsDxv65dBl-dsRL2aa6T9uNkY-fgyX1KdedpuWXZl9fXcfhr3MWLEvYmWWHBT4y-KofTCTKAG2WqW3Yx'},
+  headers: {'Authorization': 'Bearer API KEY'},
   params: {
     term: 'pizza',
     location: 'Seattle',

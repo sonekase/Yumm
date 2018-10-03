@@ -4,7 +4,7 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 const RestaurantDetail = ({ restaurant }) => {
-  const { name, rating, image_url} = restaurant;
+  const { name, rating, phone, image_url} = restaurant;
 
   return (
     <Card>

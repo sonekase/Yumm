@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import RestaurantDetail from './RestaurantDetail';
 
 // Remove API Key and replace with API KEY before pushing to GitHub...
 const config = {
-  headers: {'Authorization': 'Bearer API KEY'},
+  headers: {'Authorization': 'Bearer GqXpqnEMa9EO9na_qp2XuDEDCuFYWGLJF-JlmK8qGm0oaTr-DsDxv65dBl-dsRL2aa6T9uNkY-fgyX1KdedpuWXZl9fXcfhr3MWLEvYmWWHBT4y-KofTCTKAG2WqW3Yx'},
   params: {
     term: 'pizza',
     location: 'Seattle',
@@ -16,7 +17,6 @@ class RestaurantList extends Component {
   state = {
     restaurants: {}
   };
-
 
 constructor(props) {
   super(props);
@@ -31,11 +31,10 @@ constructor(props) {
   renderRestaurants = () => {
     console.log(this.state.restaurants.businesses);
     if(this.state.restaurants.businesses) {
-
-      return this.state.restaurants.businesses.map(restaurant => <Text>{restaurant.name}: {restaurant.phone}</Text>);
+      return this.state.restaurants.businesses.map(restaurant =>
+        <RestaurantDetail key={restaurant.name} restaurant={restaurant} />
+      );
     }
-    // console.log("Test Test: RENDER RESTAURANTS!!!");
-    // return "test";
   }
 
   render() {

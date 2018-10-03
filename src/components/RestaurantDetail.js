@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Emoji from 'react-native-emoji';
 
 const RestaurantDetail = ({ restaurant }) => {
   const { name, rating, phone, image_url} = restaurant;
@@ -16,7 +17,7 @@ const RestaurantDetail = ({ restaurant }) => {
         </View>
         <View style={styles.headerContentStyle}>
           <Text>{name}</Text>
-          <Text>{rating}</Text>
+          <Text>{rating} <Emoji name="pizza" style={{fontSize: 15}} /></Text>
         </View>
       </CardSection>
     </Card>

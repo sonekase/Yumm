@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import axios from 'axios';
 import RestaurantDetail from './RestaurantDetail';
 
 // Remove API Key and replace with API KEY before pushing to GitHub...
 const config = {
-  headers: {'Authorization': 'Bearer API KEY'},
+  headers: {'Authorization': 'Bearer GqXpqnEMa9EO9na_qp2XuDEDCuFYWGLJF-JlmK8qGm0oaTr-DsDxv65dBl-dsRL2aa6T9uNkY-fgyX1KdedpuWXZl9fXcfhr3MWLEvYmWWHBT4y-KofTCTKAG2WqW3Yx'},
   params: {
     term: 'pizza',
     location: 'Seattle',
-    limit: 10
+    limit: 15
   }
 };
 
@@ -40,9 +40,11 @@ constructor(props) {
   render() {
     console.log(this.state);
     return (
-      <View>
-        {this.renderRestaurants()}
-      </View>
+      <ScrollView>
+        <View>
+          {this.renderRestaurants()}
+        </View>
+      </ScrollView>
     );
   }
 }

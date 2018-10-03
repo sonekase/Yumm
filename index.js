@@ -5,11 +5,12 @@ import React from 'react';
 import { AppRegistry, View } from 'react-native';
 import Header from './src/components/Header';
 import RestaurantList from './src/components/RestaurantList';
+
 // Create a component
 const App = () => {
   return (
     <View>
-      <Header headerText={'Restaurants'} />
+      <Header headerText={'Yumm!'} />
       <RestaurantList />
     </View>
   );

@@ -25,6 +25,7 @@ const styles = {
   },
   textStyle: {
     fontSize: 20,
+    fontWeight: 'bold',
     color: '#FFF'
   }
 };
